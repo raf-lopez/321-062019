@@ -1,7 +1,6 @@
 package ownclasses;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class DesigningClasses {
 	public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class DesigningClasses {
 		john.email = "john@gmail.com";
 		john.phoneNum = "555-22-33";
 		Calendar johnBirthday = Calendar.getInstance();
-		johnBirthday.set(1990, Calendar.APRIL, 24);
+		johnBirthday.set(1993, Calendar.MAY, 25);
 		john.birthday = johnBirthday;
 		System.out.println(john.firstName);
 		System.out.println(john.getFirstName());
@@ -30,11 +29,12 @@ public class DesigningClasses {
 	}
 }
 
+// enumeration class - good, but still not type-safe
 //class Gender {
 //	static String MALE = "male";
 //	static String FEMALE = "female";
 //}
-//
+
 enum Gender {
 	MALE,FEMALE
 }
@@ -114,7 +114,4 @@ class Contact {
 	public Calendar getBirthday() {
 		return birthday;
 	}
-	
-	
-	
 }
