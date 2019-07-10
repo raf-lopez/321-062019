@@ -11,7 +11,7 @@ public class ArrayListDemo {
 
 		String[] fruitsArray = 
 			{"apple", "grapes", "lemon"};
-		int[] numbersArray = ne int[24];
+		int[] numbersArray = new int[24];
 		
 		// please only store strings into this list
 		ArrayList<String> fruits = new ArrayList<String>();

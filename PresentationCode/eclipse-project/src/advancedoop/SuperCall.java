@@ -5,7 +5,6 @@ public class SuperCall {
 	public static void main(String[] args) {
 		Subclass subclass = new Subclass();
 	}
-
 }
 
 
@@ -17,7 +16,7 @@ class Superclass {
 
 class Subclass extends Superclass{
 	Subclass() {
-		super();
+		super(1111);
 		System.out.println("Subclass");
 	}
 }
