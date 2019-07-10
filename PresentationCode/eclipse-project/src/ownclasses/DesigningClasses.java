@@ -6,7 +6,6 @@ import java.util.Date;
 public class DesigningClasses {
 	public static void main(String[] args) {
 		Contact john = new Contact();
-//		john.firstName = "John";
 		john.setFirstName("John");
 		john.lastName = "Cruz";
 		john.email = "john@gmail.com";
@@ -16,9 +15,7 @@ public class DesigningClasses {
 		john.birthday = johnBirthday;
 		System.out.println(john.firstName);
 		System.out.println(john.getFirstName());
-		String fn = john.getFullName();
-		System.out.println(fn);
-
+		String fn = john.getFullName(); System.out.println(fn); 
 		Contact mary = new Contact();
 		mary.firstName = "Mary";
 		mary.lastName = "Amparo";
@@ -26,25 +23,49 @@ public class DesigningClasses {
 		mary.phoneNum = "555-21-33";
 		
 		System.out.println(mary.getFullName());
-		Contact newContact = Contact.getInstance();
-		
-		System.out.println(john.getAge());
+		Contact pete = new Contact();
+		pete.setId(1111);
+		pete.setId("1111");
+		pete.gender = Gender.MALE;
 	}
 }
 
+//class Gender {
+//	static String MALE = "male";
+//	static String FEMALE = "female";
+//}
+//
+enum Gender {
+	MALE,FEMALE
+}
+
 class Contact {
+	int id;
 	String firstName;
 	String lastName;
 	String email = "<n/a>";
 	String phoneNum;
 	Calendar birthday;
-
-	int getAge() {
-		Calendar today = Calendar.getInstance();
-		long ageInMsecs = today.getTimeInMillis() - this.birthday.getTimeInMillis();
-		int result = (int)(ageInMsecs/1000L/60/60/24/365);
-		return result;
+	Gender gender;
+	
+	
+	Contact() {
+		id = 0;
 	}
+
+	protected void finalize() {
+		// finalizaer code
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setId(String idAsString) {
+		int idAsInt = Integer.parseInt(idAsString);
+		this.id = idAsInt;
+	}
+
 
 	static Contact getInstance() {
 		return new Contact();
