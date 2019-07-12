@@ -34,8 +34,7 @@ public class ShorteningCode {
 				System.out.println(randomNumber);
 			}
 		};
-).start();
-	}
+).start(); }
 
 }
 
