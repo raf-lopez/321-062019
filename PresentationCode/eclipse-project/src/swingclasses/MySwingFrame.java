@@ -39,7 +39,7 @@ public class MySwingFrame extends JFrame{
 		menuFile.add(miQuit);
 
 		mb.add(menuFile);
-		this.add(mb, BorderLayout.NORTH);
+		this.add(mb, BorderLayout.PAGE_START);
 	}
 
 	public static void main(String[] args) {
